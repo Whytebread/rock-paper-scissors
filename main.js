@@ -59,6 +59,15 @@ function playGame() {
         (humanChoice == "scissors" && computerChoice == "scissors") 
         console.log("Draw! Scissors equal to scissors!")
     }
+
+    if (roundCounter == 5) {
+        if (humanScore > computerScore) {
+            console.log("Congradulations! You win!")
+        } else {
+            console.log("You lost! Better luck next time!")
+        }
+        return
+    }
 }
 
 playRound(humanSelection, computerSelection);
