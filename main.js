@@ -75,7 +75,7 @@ playRound(humanSelection, computerSelection);
 
 }
 
-playGame(playRound)
+playGame();
 
 // Score variables
 
