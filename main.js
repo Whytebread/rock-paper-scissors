@@ -1,18 +1,27 @@
 // RPS logic
 
 function getComputerChoice() {
-    let choice = Math.random() * 3
-        if (choice <= 1) {
-            choice = "rock"
-        } else if (choice <= 2) {
-            choice = "paper"
+    let computerSelection = Math.random() * 3
+        if (computerSelection <= 1) {
+            computerSelection = "rock"
+        } else if (computerSelection <= 2) {
+            computerSelection = "paper"
         } else {
-            choice = "scissors"
+            computerSelection = "scissors"
         }
 }
 
 function getHumanChoice() {
-
+    let humanSelection = prompt("rock, paper, or scissors?")
+        if (humanSelection = "rock" || "Rock" || "ROCK") {
+           return humanSelection = "rock"
+        } else if (humanSelection = "paper" || "Paper" || "PAPER") {
+           return humanSelection = "paper"
+        } else if (humanSelection = "scissors" || "Scissors" || "SCISSORS") {
+           return humanSelection = "scissors"
+        } else {
+            return prompt("Please select rock, paper, or scissors");
+        }
 }
 
 const humanSelection = getHumanChoice();
