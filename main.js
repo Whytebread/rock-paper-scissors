@@ -15,12 +15,12 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanSelection = prompt("rock, paper, or scissors?")
-    if (humanSelection = "rock" || "Rock" || "ROCK") {
-        return humanSelection = "rock"
-    } else if (humanSelection = "paper" || "Paper" || "PAPER") {
-        return humanSelection = "paper"
-    } else if (humanSelection = "scissors" || "Scissors" || "SCISSORS") {
-        return humanSelection = "scissors"
+    if (humanSelection == "rock" || "Rock" || "ROCK") {
+        humanSelection == "rock"
+    } else if (humanSelection == "paper" || "Paper" || "PAPER") {
+         humanSelection == "paper"
+    } else if (humanSelection == "scissors" || "Scissors" || "SCISSORS") {
+         humanSelection == "scissors"
     } else {
         prompt("Please select rock, paper, or scissors");
     }
