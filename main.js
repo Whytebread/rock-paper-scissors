@@ -10,22 +10,24 @@ function getComputerChoice() {
         computerSelection = "scissors"
     }
     return computerSelection;
-
-
 }
 
 function getHumanChoice() {
-    let humanSelection = prompt("rock, paper, or scissors?")
-    if (humanSelection == "rock" || "Rock" || "ROCK") {
-        humanSelection == "rock"
-    } else if (humanSelection == "paper" || "Paper" || "PAPER") {
-        humanSelection == "paper"
-    } else if (humanSelection == "scissors" || "Scissors" || "SCISSORS") {
-        humanSelection == "scissors"
+    let humanSelection = prompt("rock, paper or scissors?")
+    if (humanSelection === "rock" || humanSelection === "Rock" || humanSelection === "ROCK") {
+        humanSelection = "rock"
+        return humanSelection;
+    } else if (humanSelection === "paper" || humanSelection === "Paper" || humanSelection === "PAPER") {
+        humanSelection = "paper"
+        return humanSelection;
+    } else if (humanSelection == "scissors" || humanSelection ==="Scissors" || humanSelection === "SCISSORS") {
+        humanSelection = "scissors"
+        return humanSelection;
     } else {
-        prompt("Please select rock, paper, or scissors");
+        alert("Please select rock, paper or scissors only")
+        return getHumanChoice();
     }
-    return humanSelection;
+    
 }
 
 const humanSelection = getHumanChoice();
@@ -77,13 +79,16 @@ function playGame() {
             console.log("Draw! Scissors equal to scissors!")
         }
 
+        console.log(roundCounter);
+        console.log(humanScore);
+        console.log(computerScore);
+
         if (roundCounter == 5) {
             if (humanScore > computerScore) {
                 console.log("Congradulations! You win!")
             } else {
                 console.log("You lost! Better luck next time!")
             }
-            return
         }
     }
 
