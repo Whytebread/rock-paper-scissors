@@ -1,3 +1,11 @@
+// global variables
+const rock_btn = document.querySelector("#rock");
+const paper_btn = document.querySelector("#paper");
+const scissors_btn = document.querySelector("#scissors");
+
+const humanScoreDisplay = document.querySelector(".human-score");
+const computerScoreDisplay = document.querySelector(".computer-score");
+const winDisplay = document.querySelector(".end-result");
 
 function playGame() {
 
@@ -22,7 +30,6 @@ function playGame() {
     }
 
     function getHumanChoice() {
-        let humanSelection = prompt("rock, paper or scissors?")
         if (humanSelection === "rock" || humanSelection === "Rock" || humanSelection === "ROCK") {
             humanSelection = "rock"
             return humanSelection;
@@ -33,7 +40,6 @@ function playGame() {
             humanSelection = "scissors"
             return humanSelection;
         } else {
-            alert("Please select rock, paper or scissors only")
             return getHumanChoice();
         }
 
