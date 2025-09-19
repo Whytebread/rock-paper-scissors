@@ -6,6 +6,7 @@ const scissors_btn = document.querySelector("#scissors");
 const humanScoreDisplay = document.querySelector(".human-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 const winDisplay = document.querySelector(".end-result");
+const roundDisplay = document.querySelector(".round-result");
 
 function playGame() {
 
