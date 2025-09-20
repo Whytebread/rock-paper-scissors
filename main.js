@@ -8,6 +8,20 @@ const computerScoreDisplay = document.querySelector(".computer-score");
 const winDisplay = document.querySelector(".end-result");
 const roundDisplay = document.querySelector(".round-result");
 
+// event listenters
+rock_btn.addEventListener("click", ()=> {
+  humanChoice === "rock";
+});
+
+paper_btn.addEventListener("click", ()=> {
+  humanChoice === "paper";
+});
+
+scissors_btn.addEventListener("click", ()=> {
+  humanChoice === "scissors";
+});
+
+
 function playGame() {
 
     let roundCounter = 0;
@@ -30,24 +44,7 @@ function playGame() {
         return computerSelection;
     }
 
-    function getHumanChoice() {
-        if (humanSelection === "rock" || humanSelection === "Rock" || humanSelection === "ROCK") {
-            humanSelection = "rock"
-            return humanSelection;
-        } else if (humanSelection === "paper" || humanSelection === "Paper" || humanSelection === "PAPER") {
-            humanSelection = "paper"
-            return humanSelection;
-        } else if (humanSelection == "scissors" || humanSelection === "Scissors" || humanSelection === "SCISSORS") {
-            humanSelection = "scissors"
-            return humanSelection;
-        } else {
-            return getHumanChoice();
-        }
-
-    }
-
     // while (roundCounter < 5) {
-        const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
         function playRound(humanChoice, computerChoice) {
 

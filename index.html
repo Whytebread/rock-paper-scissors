@@ -6,13 +6,13 @@
     <title>Rock Paper Scissors</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script src='main.js' defer></script>
 </head>
 <body>
     <div class="button-container">
-        <button id="rock" onclick="playGame()">Rock</button>
-        <button id="paper" onclick="playGame()">Paper</button>
-        <button id="scissors" onclick="playGame()">Scissors</button>
+        <button id="rock" onclick="playRound()" value="rock">Rock</button>
+        <button id="paper" onclick="playRound()" value="paper">Paper</button>
+        <button id="scissors" onclick="playRound()" value="scissors">Scissors</button>
     </div>
 
     <div class="results-container">
