@@ -7,18 +7,19 @@ const humanScoreDisplay = document.querySelector(".human-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 const winDisplay = document.querySelector(".end-result");
 const roundDisplay = document.querySelector(".round-result");
+const roundCounterDisplay = document.querySelector(".round-counter-display");
 
 // event listenters
 rock_btn.addEventListener("click", ()=> {
-  humanChoice === "rock";
+  humanChoice = "rock";
 });
 
 paper_btn.addEventListener("click", ()=> {
-  humanChoice === "paper";
+  humanChoice = "paper";
 });
 
 scissors_btn.addEventListener("click", ()=> {
-  humanChoice === "scissors";
+  humanChoice = "scissors";
 });
 
 
@@ -53,54 +54,54 @@ function playGame() {
 
 
             if (humanChoice == "rock" && computerChoice == "scissors") {
-                console.log("You win! Rock beats scissors!")
+                roundDisplay.innerText = "You win! Rock beats scissors!"
                 humanScore++
                 roundCounter++
             } else if (humanChoice == "rock" && computerChoice == "paper") {
-                console.log("You lose! Paper beats rock!")
+                roundDisplay.innerText = "You lose! Paper beats rock!"
                 computerScore++
                 roundCounter++
             } else if (humanChoice == "rock" && computerChoice == "rock") {
-                console.log("Draw! Rock equal to rock!")
+                roundDisplay.innerText = "Draw! Rock equal to rock!"
                 roundCounter++
             } else if (humanChoice == "paper" && computerChoice == "rock") {
-                console.log("You win! Paper beats rock!")
+                roundDisplay.innerText = "You win! Paper beats rock!"
                 humanScore++
                 roundCounter++
             } else if (humanChoice == "paper" && computerChoice == "scissors") {
-                console.log("You lose! Scissors beats paper!")
+                roundDisplay.innerText = "You lose! Scissors beats paper!"
                 computerScore++
                 roundCounter++
             } else if (humanChoice == "paper" && computerChoice == "paper") {
-                console.log("Draw! Paper equal to paper!")
+                roundDisplay.innerText = "Draw! Paper equal to paper!"
                 roundCounter++
             } else if (humanChoice == "scissors" && computerChoice == "rock") {
-                console.log("You lose! Rock beats scissors!")
+                roundDisplay.innerText = "You lose! Rock beats scissors!"
                 computerScore++
                 roundCounter++
             } else if (humanChoice == "scissors" && computerChoice == "paper") {
-                console.log("You win! Scissors beats paper!")
+                roundDisplay.innerText = "You win! Scissors beats paper!"
                 humanScore++
                 roundCounter++
             } else if (humanChoice == "scissors" && computerChoice == "scissors") {
-                console.log("Draw! Scissors equal to scissors!")
+                roundDisplay.innerText = "Draw! Scissors equal to scissors!"
                 roundCounter++
             }
 
-            console.log(`Round: ${roundCounter}`);
-            console.log(`Human score: ${humanScore}`);
-            console.log(`Computer score: ${computerScore}`);
+            roundCounterDisplay.innerHTML = `Round: ${roundCounter}`;
+            humanScoreDisplay.innerText = `Human score: ${humanScore}`;
+            computerScoreDisplay.innerText = `Computer score: ${computerScore}`;
 
         }
 
         playRound(humanSelection, computerSelection);
         if (roundCounter === 5) {
             if (humanScore > computerScore) {
-                console.log("Congratulations! You win!");
+                winDisplay.innerText = "Congratulations! You win!";
             } else if (humanScore === computerScore) {
-                console.log("Draw!");
+                winDisplay.innerText = "Draw!";
             } else {
-                console.log("You lose! Better luck next time!");
+                winDisplay.innerText = "You lose! Better luck next time!";
             }
         }
 
