@@ -12,14 +12,17 @@ const roundCounterDisplay = document.querySelector(".round-counter-display");
 // event listenters
 rock_btn.addEventListener("click", ()=> {
   humanChoice = "rock";
+  playRound(humanChoice, computerChoice);
 });
 
 paper_btn.addEventListener("click", ()=> {
   humanChoice = "paper";
+  playRound(humanChoice, computerChoice);
 });
 
 scissors_btn.addEventListener("click", ()=> {
   humanChoice = "scissors";
+  playRound(humanChoice, computerChoice);
 });
 
 
@@ -45,8 +48,9 @@ function playGame() {
         return computerSelection;
     }
 
-    // while (roundCounter < 5) {
+    while (roundCounter < 5) {
         const computerSelection = getComputerChoice();
+
         function playRound(humanChoice, computerChoice) {
 
             console.log(`Human choice: ${humanChoice}`);
@@ -94,7 +98,7 @@ function playGame() {
 
         }
 
-        playRound(humanSelection, computerSelection);
+        playRound(humanChoice, computerSelection);
         if (roundCounter === 5) {
             if (humanScore > computerScore) {
                 winDisplay.innerText = "Congratulations! You win!";
@@ -105,7 +109,7 @@ function playGame() {
             }
         }
 
-    // }
+     } 
 }
 
 
