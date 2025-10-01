@@ -46,8 +46,6 @@ function getComputerChoice() {
     return computerSelection;
 }
 
-const computerSelection = getComputerChoice();
-
 function playRound(humanChoice, computerChoice) {
 
     console.log(`Human choice: ${humanChoice}`);
@@ -93,16 +91,18 @@ function playRound(humanChoice, computerChoice) {
     humanScoreDisplay.innerText = `Human score: ${humanScore}`;
     computerScoreDisplay.innerText = `Computer score: ${computerScore}`;
 
+    if (roundCounter === 5) {
+        if (humanScore > computerScore) {
+            winDisplay.innerText = "Congratulations! You win!";
+        } else if (humanScore === computerScore) {
+            winDisplay.innerText = "Draw!";
+        } else {
+            winDisplay.innerText = "You lose! Better luck next time!";
+        }
+    }
+
 }
 
-if (roundCounter === 5) {
-    if (humanScore > computerScore) {
-        winDisplay.innerText = "Congratulations! You win!";
-    } else if (humanScore === computerScore) {
-        winDisplay.innerText = "Draw!";
-    } else {
-        winDisplay.innerText = "You lose! Better luck next time!";
-    }
-}
+
 
 
